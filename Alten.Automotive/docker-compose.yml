@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+
+  customer.apis:
+    image: ${DOCKER_REGISTRY-}customerapis
+    build:
+      context: .
+      dockerfile: Services/Customers/Customer.APIs/Dockerfile
+
+
+  vehicles.apis:
+    image: ${DOCKER_REGISTRY-}vehiclesapis
+    build:
+      context: .
+      dockerfile: Services/Vehicles/Vehicles.APIs/Dockerfile
+
